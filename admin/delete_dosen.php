@@ -1,10 +1,10 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_id'])) {
-    header('Location: ../../login.php');
+    header('Location: /admin/login.php');
     exit();
 }
-require ('../mongodb_connection.php');
+require('mongodb_connection.php');
 if (isset($_GET['nidn'])){
     $nidn = $_GET['nidn'];
     $collection = $database->dosen;
